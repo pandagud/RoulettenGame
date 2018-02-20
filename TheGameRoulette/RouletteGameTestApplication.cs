@@ -1,4 +1,6 @@
-﻿namespace RouletteGame.Legacy
+﻿using TheGameRoulette;
+
+namespace RouletteGame.Legacy
 {
     internal class RouletteGameTestApplication
     {
@@ -8,6 +10,7 @@
             game.OpenBets();
             game.PlaceBet(new ColorBet("Player 1", 100, Field.Black));
             game.PlaceBet(new ColorBet("Player 1", 100, Field.Red));
+           
 
             game.PlaceBet(new EvenOddBet("Player 2", 100, true));
             game.PlaceBet(new EvenOddBet("Player 2", 100, false));
