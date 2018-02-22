@@ -11,6 +11,7 @@ namespace RouletteGame.Legacy
             PlayerName = name;
             Amount = amount;
             
+
         }
 
 
