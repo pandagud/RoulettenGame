@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using TheGameRoulette;
 
 namespace RouletteGame.Legacy
 {
@@ -7,11 +8,14 @@ namespace RouletteGame.Legacy
     {
         private readonly List<Field> _fields;
         private Field _result;
+        private IRandom randomizer;
 
-        public Roulette()
+        public Roulette(IRandom _randomizer)
         {
+            randomizer = _randomizer;
             _fields = new List<Field>
             {
+                
                 new Field(0, Field.Green),
                 new Field(1, Field.Red),
                 new Field(2, Field.Black),
@@ -56,7 +60,7 @@ namespace RouletteGame.Legacy
 
         public void Spin()
         {
-            var n = (uint) new Random().Next(0, 37);
+            var n = randomizer.Next();
             _result = _fields[(int) n];
         }
 

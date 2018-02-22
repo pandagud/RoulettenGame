@@ -1,4 +1,5 @@
 ﻿using System;
+using TheGameRoulette;
 
 namespace RouletteGame.Legacy
 {
